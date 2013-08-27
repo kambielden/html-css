@@ -1,0 +1,104 @@
+@charset "utf-8";
+@import url(normalize.css);
+/*
+# set
+*/
+/* line 6, ../scss/_placeholders.scss */
+.pane-2 {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../Users/kambie/.gem/ruby/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.pane-2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+# container
+*/
+/* line 12, ../scss/preview.scss */
+.container {
+  min-height: 100%;
+}
+
+/* line 16, ../scss/preview.scss */
+.container-top {
+  width: 100%;
+  height: 50px;
+  background-color: #0d3336;
+  color: white;
+}
+
+/* line 23, ../scss/preview.scss */
+.container-menu {
+  background-color: #f1f1f1;
+}
+
+/* line 27, ../scss/preview.scss */
+.container-bottom {
+  height: 50px;
+  background-color: #fbfdf6;
+}
+
+/*
+# type-preview
+*/
+/* line 35, ../scss/preview.scss */
+.type-preview {
+  padding: 1.42857em;
+  background-color: white;
+  word-break: break-all;
+}
+
+/* line 41, ../scss/preview.scss */
+.caption-under {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.42857em;
+  padding-bottom: 0.21429em;
+  border-bottom: 1px solid #0d3336;
+  background-color: #f1f1f1;
+}
+/* line 49, ../scss/preview.scss */
+.caption-under:after {
+  content: attr(title);
+  display: block;
+  position: absolute;
+  left: .5em;
+  bottom: -1.64286em;
+  white-space: nowrap;
+}
+/* line 58, ../scss/preview.scss */
+.caption-under:before {
+  /*content: '\2191';*/
+}
+
+/* line 67, ../scss/preview.scss */
+.pane-2 .left,
+.pane-2 .right {
+  float: left;
+  margin-right: 5.71429em;
+}
+
+/* line 75, ../scss/preview.scss */
+.list-label .label {
+  display: inline-block;
+  min-width: 10em;
+  margin-bottom: 0.71429em;
+}
+
+/* line 85, ../scss/preview.scss */
+.speficity th,
+.speficity td {
+  padding: 0.71429em;
+  border-bottom: 1px solid #dddddd;
+}
+/* line 90, ../scss/preview.scss */
+.speficity td {
+  text-align: center;
+}
+/* line 94, ../scss/preview.scss */
+.speficity td:first-child {
+  text-align: left;
+}
