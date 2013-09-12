@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* line 5, ../../scss/_placeholders.scss */
+.pane-2 {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../Users/kambie/.gem/ruby/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.pane-2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+%clear-margin {
+  margin: 0;
+  padding: 0;
+}
+*/
+/* line 6, ../../scss/layout/preview.scss */
+h3 {
+  border-bottom: 2px solid #dddddd;
+}
+
+/*
+# container
+*/
+/* line 14, ../../scss/layout/preview.scss */
+.container {
+  min-height: 100%;
+}
+
+/* line 18, ../../scss/layout/preview.scss */
+.container-top {
+  width: 100%;
+  height: 50px;
+  background-color: #0d3336;
+  color: white;
+}
+
+/* line 25, ../../scss/layout/preview.scss */
+.container-menu {
+  background-color: #f1f1f1;
+}
+
+/* line 29, ../../scss/layout/preview.scss */
+.container-bottom {
+  height: 50px;
+  background-color: #fbfdf6;
+}
+
+/*
+# type-preview
+*/
+/* line 37, ../../scss/layout/preview.scss */
+.type-preview {
+  padding: 1.42857em;
+  background-color: white;
+  word-break: break-all;
+}
+
+/* line 43, ../../scss/layout/preview.scss */
+.caption-under {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.42857em;
+  padding-bottom: 0.21429em;
+  border-bottom: 1px solid #0d3336;
+  background-color: #f1f1f1;
+}
+/* line 51, ../../scss/layout/preview.scss */
+.caption-under:after {
+  content: attr(title);
+  display: block;
+  position: absolute;
+  left: .5em;
+  bottom: -1.64286em;
+  white-space: nowrap;
+}
+/* line 60, ../../scss/layout/preview.scss */
+.caption-under:before {
+  /*content: '\2191';*/
+}
+
+/* line 69, ../../scss/layout/preview.scss */
+.pane-2 .left,
+.pane-2 .right {
+  float: left;
+  margin-right: 5.71429em;
+}
+
+/* line 77, ../../scss/layout/preview.scss */
+.list-label .label {
+  display: inline-block;
+  min-width: 10em;
+  margin-bottom: 0.71429em;
+}
+
+/* line 87, ../../scss/layout/preview.scss */
+.speficity th,
+.speficity td {
+  padding: 0.71429em;
+  border-bottom: 1px solid #dddddd;
+}
+/* line 92, ../../scss/layout/preview.scss */
+.speficity td {
+  text-align: center;
+}
+/* line 96, ../../scss/layout/preview.scss */
+.speficity td:first-child {
+  text-align: left;
+}

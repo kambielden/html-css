@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import url(normalize.css);
+
+/*
+# tag
+*/
+/* line 30, ../scss/base.scss */
+html {
+  height: 100%;
+}
+
+/* line 34, ../scss/base.scss */
+body {
+  height: 100%;
+  background-color: white;
+  color: #333333;
+  font: 14px/1.5 Futura, "Meiryo", "メイリオ", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Osaka", "MS PGothic", arial, helvetica, clean, sans-serif;
+}
+
+/*
+# sample
+*/
+/* line 44, ../scss/base.scss */
+pre.sample {
+  margin: 0;
+}
+
+/* line 50, ../scss/base.scss */
+table.sample td {
+  white-space: nowrap;
+}
+
+/* line 55, ../scss/base.scss */
+.color-box {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0.21429em 0.71429em;
+  vertical-align: middle;
+}
