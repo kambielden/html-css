@@ -14,11 +14,11 @@
       <div class="container-main type-preview">
         <!-- .content -->
         <div class="content">
-          <h2>用語</h2>
+          <h2 class="title">基本用語</h2>
           <!-- .pane-2 -->
           <div class="pane-2">
             <div class="left">
-              <h3>html</h3>
+              <h3 class="title">html</h3>
               <p><span class="caption-under" title="要素">&lt;a href="#"&gt;リンク&lt;/a&gt;</span></p>
               <p><span class="caption-under" title="開始タグ">&lt;a href="#"&gt;</span>リンク&lt;/a&gt;</p>
               <p>&lt;a href="#"&gt;リンク<span class="caption-under" title="終了タグ">&lt;/a&gt;</span></p>
@@ -27,7 +27,7 @@
               <p>&lt;a href="<span class="caption-under" title="属性値">#</span>"&gt;リンク&lt;/a&gt;</p>
             </div>
             <div class="right">
-              <h3>css</h3>
+              <h3 class="title">css</h3>
               <p><span class="caption-under" title="規則集合">div { color: #336699; }</span></p>
               <p><span class="caption-under" title="セレクタ">div</span> { color: #336699; }</p>
               <p>div <span class="caption-under" title="宣言ブロック">{ color: #336699; }</span></p>
@@ -37,84 +37,84 @@
             </div>
           <!-- /.pane-2 --></div>
 
-          <h2>優先度と詳細度</h2>
-            <p>優先度が同じ場合は、詳細度(特定が強い)規則集合の値が優先される</p>
-            <p>優先度と詳細度が同じ場合は、最後に宣言された値が優先される</p>
+          <h2 class="title">優先度と詳細度</h2>
+          <p>優先度が同じ場合は、詳細度(特定が強い)規則集合の値が優先される</p>
+          <p>優先度と詳細度が同じ場合は、最後に宣言された値が優先される</p>
 
-            <h3>記述場所による優先度</h3>
-            <ol class="list-label">
-              <li><span class="label">!important</span>color:red !important;</li>
-              <li><span class="label">inline/style要素</span>&lt;a style="color:green;"&gt;</li>
-              <li><span class="label">ページ内CSS</span>&lt;style&gt;a { color:black; }&lt;/style&gt;</li>
-              <li><span class="label">外部ファイルCSS</span>&lt;link href="css.css" ... &gt;</li>
-              <li><span class="label">ユーザーCSS(ブラウザのカスタマイズ)</span></li>
-              <li><span class="label">デフォルトCSS(ブラウザ)</span></li>
-            </ol>
+          <h3 class="title">記述場所による優先度</h3>
+          <ol class="list-label">
+            <li><span class="label">!important</span>color:red !important;</li>
+            <li><span class="label">inline/style要素</span>&lt;a style="color:green;"&gt;</li>
+            <li><span class="label">ページ内CSS</span>&lt;style&gt;a { color:black; }&lt;/style&gt;</li>
+            <li><span class="label">外部ファイルCSS</span>&lt;link href="css.css" ... &gt;</li>
+            <li><span class="label">ユーザーCSS(ブラウザのカスタマイズ)</span></li>
+            <li><span class="label">デフォルトCSS(ブラウザ)</span></li>
+          </ol>
 
-            <h3>記述内容による優先度</h3>
-            <ol class="list-label">
-              <li><span class="label">idの指定</span>#hoge { color:red; }</li>
-              <li><span class="label">classの指定</span>.hoge { color:green; }</li>
-              <li><span class="label">タグの指定</span>a { color:black; }</li>
-              <li><span class="label">全要素の指定</span>* { color:blue; }</li>
-            </ol>
+          <h3 class="title">記述内容による優先度</h3>
+          <ol class="list-label">
+            <li><span class="label">idの指定</span>#hoge { color:red; }</li>
+            <li><span class="label">classの指定</span>.hoge { color:green; }</li>
+            <li><span class="label">タグの指定</span>a { color:black; }</li>
+            <li><span class="label">全要素の指定</span>* { color:blue; }</li>
+          </ol>
 
-            <h3>詳細度</h3>
-            <table class="speficity">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>id</th>
-                  <th>class</th>
-                  <th>タグ</th>
-                  <th>詳細度</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>span {}</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0.0.1</td>
-                </tr>
-                <tr>
-                  <td>.hoge {}</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0.1.0</td>
-                </tr>
-                <tr>
-                  <td>.hoge span {}</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0.1.1</td>
-                </tr>
-                <tr>
-                  <td>div.hoge span {}</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>0.1.2</td>
-                </tr>
-                <tr>
-                  <td>#hoge {}</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1.0.0</td>
-                </tr>
-                <tr>
-                  <td>#hoge div.hoge span {}</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>1.1.2</td>
-                </tr>
-              </tbody>
-            </table>
+          <h3 class="title">詳細度</h3>
+          <table class="table-speficity">
+            <thead>
+              <tr>
+                <th></th>
+                <th>id</th>
+                <th>class</th>
+                <th>タグ</th>
+                <th>詳細度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>span {}</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0.0.1</td>
+              </tr>
+              <tr>
+                <td>.hoge {}</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0.1.0</td>
+              </tr>
+              <tr>
+                <td>.hoge span {}</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0.1.1</td>
+              </tr>
+              <tr>
+                <td>div.hoge span {}</td>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>0.1.2</td>
+              </tr>
+              <tr>
+                <td>#hoge {}</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1.0.0</td>
+              </tr>
+              <tr>
+                <td>#hoge div.hoge span {}</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+                <td>1.1.2</td>
+              </tr>
+            </tbody>
+          </table>
 
         <!-- /.content --></div>
       <!-- /.container-main --></div>

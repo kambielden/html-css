@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>word-break word-wrap</title>
+    <link rel="stylesheet" type="text/css" href='../../css/base.css' />
+    <link rel="stylesheet" type="text/css" href='../../css/layout/preview.css' />
+  </head>
+  <body class="theme-document">
+    <!-- .container -->
+    <div class="container">
+      <!-- .content-main -->
+      <div class="container-main type-preview">
+        <!-- .content -->
+        <div class="content">
+          <h2 class="title">単語の折り返し処理</h2>
+          <h3 class="title">折り返し?</h3>
+          <!-- .box -->
+          <div class="box">
+            <p>ホワイトスペース, ハイフン, クエスチョンマークなどが代表的な区切り</p>
+            <p>基本は単語区切りで折り返す、長いテキストは折り返さない(折り返せない)</p>
+
+            <!-- .example-view -->
+            <div class="example-view">
+              <!-- example -->
+              <div>
+                <span>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                https://hoge.com/k35406f3069020%202%2232975%22%2C20%223297622%2020f89954%20%3E%3D%20%221%22
+                </span>
+              </div>
+              <!-- /example -->
+            <!-- /.example-view --></div>
+
+            <p><strong>レイアウトやデザインが崩れるので、奇麗に折り返したい</strong></p>
+
+            <p>長いテキストも折り返えす</p>
+            <!-- .example-view -->
+            <div class="example-view">
+              <!-- example -->
+              <div style="word-wrap:break-word;">
+                <span>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                https://hoge.com/k35406f3069020%202%2232975%22%2C20%223297622%2020f89954%20%3E%3D%20%221%22
+                </span>
+              </div>
+              <!-- /example -->
+            <!-- /.example-view --></div>
+
+          <!-- /.box --></div>
+
+          <h3 class="title">3つのプロパティ</h3>
+          <h4 class="title">word-break</h4>
+          <!-- .box -->
+          <div class="box">
+            <p>改行に関する禁則処理の方法を指定する</p>
+            <table class="table-results">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>IE</th>
+                  <th>Chrome</th>
+                  <th>Safari</th>
+                  <th>Firefox</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>normal, break-all</td>
+                  <td><i class="icon-yes"></i></td>
+                  <td><i class="icon-yes"></i></td>
+                  <td><i class="icon-yes"></i></td>
+                  <td><i class="icon-yes"></i></td>
+                </tr>
+                <tr>
+                  <td>keep-all</td>
+                  <td><i class="icon-yes"></i></td>
+                  <td><i class="icon-no"></i></td>
+                  <td><i class="icon-no"></i></td>
+                  <td><i class="icon-yes"></i></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>normal</td>
+                  <td>デフォルト、単語中は改行されない(CJKの単語には適用されない)</td>
+                </tr>
+                <tr>
+                  <td>break-all</td>
+                  <td>単語中でも改行する(CJKの単語には適用されない)</td>
+                </tr>
+                <tr>
+                  <td>keep-all</td>
+                  <td>CJKの単語も含めて単語中は改行されない</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>break-all を指定すると "consectetuer" が改行されています</p>
+            <!-- .example-view -->
+            <div class="example-view">
+              <!-- example -->
+              <div style="word-break:break-all;">
+                <span>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                https://hoge.com/k35406f3069020%202%2232975%22%2C20%223297622%2020f89954%20%3E%3D%20%221%22
+                </span>
+              </div>
+              <!-- /example -->
+            <!-- /.example-view --></div>
+
+            <p>keep-all は対応ブラウザが少ないのと、単語の解釈が難しいのでまだ実用的はないかなと</p>
+
+          <!-- /.box --></div>
+
+          <h4 class="title">word-wrap (overflow-wrap)</h4>
+          <!-- .box -->
+          <div class="box">
+            <p>文字列が長すぎてボックス要素に収まらない場合、単語の途中での改行を行うかどうかを指定する</p>
+            <p>IEの拡張プロパティ、現在の草案では overflow-wrap に改名されているので注意が必要</p>
+            <table class="table-results">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>IE</th>
+                  <th>Chrome</th>
+                  <th>Safari</th>
+                  <th>Firefox</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td><i class="icon-yes"></i></td>
+                  <td><i class="icon-yes"></i></td>
+                  <td><i class="icon-yes"></i></td>
+                  <td><i class="icon-yes"></i></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>normal</td>
+                  <td>デフォルト、単語の分割位置でのみ改行する</td>
+                </tr>
+                <tr>
+                  <td>break-word</td>
+                  <td>文字列が長く、ボックス要素に収まらない場合、単語の途中での改行する</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>break-word を指定すると "consectetuer" は改行されず、URLのみ改行されます</p>
+            <!-- .example-view -->
+            <div class="example-view">
+              <!-- example -->
+              <div style="word-wrap:break-word;">
+                <span>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                https://hoge.com/k35406f3069020%202%2232975%22%2C20%223297622%2020f89954%20%3E%3D%20%221%22
+                </span>
+              </div>
+              <!-- /example -->
+            <!-- /.example-view --></div>
+
+          <!-- /.box --></div>
+
+          <h4 class="title">hyphens</h4>
+          <!-- .box -->
+          <div class="box">
+            <p>ブラウザが改行候補位置をどのように処理するかを指定する</p>
+            <p>改行候補位置とはテキスト中で改行が可能な位置をハイフン(&amp;shy;)などを利用して指定した位置</p>
+
+            <table class="table-results">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>IE</th>
+                  <th>Chrome</th>
+                  <th>Safari</th>
+                  <th>Firefox</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ベンダープレフィックスが必要</td>
+                  <td>10~</td>
+                  <td><i class="icon-yes"></i></td>
+                  <td><i class="icon-yes"></i></td>
+                  <td><i class="icon-yes"></i></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>none</td>
+                  <td>改行候補位置があっても改行されない</td>
+                </tr>
+                <tr>
+                  <td>manual</td>
+                  <td>改行候補位置でのみ改行される</td>
+                </tr>
+                <tr>
+                  <td>auto</td>
+                  <td>lang 属性で指定された言語により、ブラウザのハイフネーション規則に従い自動的に単語を改行する。<br />改行候補位置は、可能であれば改行位置として選択されます。</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>"con&amp;shy;sectetuer" に改行位置を指定 "con&amp;shy;sectetuer", hyphens:manual;</p>
+
+            <p>hyphens:manual; では &amp;shy; が "-" で表示され改行されます</p>
+            <!-- .example-view -->
+            <div class="example-view">
+              <!-- example -->
+              <div>
+                <span>
+                Lorem ipsum dolor sit amet, con&shy;sectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                </span>
+              </div>
+              <!-- /example -->
+            <!-- /.example-view --></div>
+
+            <p>hyphens:none; では &amp;shy; は何も表示されす、単語中は改行されません</p>
+            <!-- .example-view -->
+            <div class="example-view">
+              <!-- example -->
+              <div style="-webkit-hyphens:none;">
+                <span>
+                Lorem ipsum dolor sit amet, con&shy;sectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                </span>
+              </div>
+              <!-- /example -->
+            <!-- /.example-view --></div>
+
+          <!-- /.box --></div>
+
+          <h3 class="title">上手く折り返されない?</h3>
+          <!-- .box -->
+          <div class="box">
+            <p>文字列が長すぎてボックス要素に収まらない...とあるようにボックス要素の横幅が折り返しの基準になります</p>
+            <p>inline-block や table-cell要素は、内容によりの幅が決まることがあるので、 "ボックス要素に収まらない" という判断ができなく、折り返しされないように見えることがあります</p>
+            <p>width や max-width プロパティを利用して auto 以外の値、ボックスの最大の幅を指定すると折り返されるようになると思います</p>
+
+            <!-- .example-view -->
+            <div class="example-view" style="display:inline-block;width:auto;">
+              <!-- example -->
+              <div>
+                <span>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                https://hoge.com/k35406f3069020%202%2232975%22%2C20%223297622%2020f89954%20%3E%3D%20%221%22
+                </span>
+              </div>
+              <!-- /example -->
+            <!-- /.example-view --></div>
+
+          <!-- /.box --></div>
+
+          <h3 class="title">何で折り返される?</h3>
+          <!-- .box -->
+          <div class="box">
+            <p>IE では、word-wrap: break-word が指定(継承)されていると white-space: nowrap; text-overflow: ellipsis; が効きかず折り返されてしまいます</p>
+            <p>その場合 word-wrap: normal; を指定すると省略表示されるようになると思います</p>
+          <!-- /.box --></div>
+
+          <h3 class="title">word-break: break-word;?</h3>
+          <!-- .box -->
+          <div class="box">
+            <p>Compass Mixins word-break("break-all") の出力</p>
+            <!-- .example-code -->
+            <div class="example-code">
+              <!-- 20px * line + 6px -->
+              <textarea style="height:106px;">
+.wordBreak {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+}</textarea>
+            <!-- /.example-code --></div>
+            <p>break-word は標準の値ではありません、元は webkit 向けのものです</p>
+            <p>Firefox の折り返し(デフォルトで自動折り返しがある)をハックするための指定みたいです</p>
+          <!-- /.box --></div>
+
+          <h3 class="title">まとめ</h3>
+          <ul>
+            <li>overflow-wrap(word-wrap), break-word, hyphens どれもまだ草案なので w3c を watch してましょう</li>
+            <li>Compass 使えるなら Mixins word-break(value) 使え</li>
+            <li>@include word-break(value) 使いたくないなら 自分で placeholder selector 作れ</li>
+            <li>細かいこと気にしないなら word-wrap: break-word; だけでいいんじゃない</li>
+          </ul>
+
+          <h3 class="title">参考</h3>
+          <ul>
+            <li><a class="link-base" href="http://dev.w3.org/csswg/css-text/#word-break-property">http://dev.w3.org/csswg/css-text/#word-break-property</a></li>
+            <li><a class="link-base" href="http://dev.w3.org/csswg/css-text/#overflow-wrap-property">http://dev.w3.org/csswg/css-text/#overflow-wrap-property</a></li>
+          </ul>
+
+        <!-- /.content --></div>
+      <!-- /.container-main --></div>
+    <!-- /.container --></div>
+  </body>
+</html>
