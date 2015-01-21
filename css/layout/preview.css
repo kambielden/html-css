@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* line 5, ../../scss/_placeholders.scss */
+/* line 13, ../../scss/_placeholders.scss */
 .pane-2 {
   *zoom: 1;
 }
@@ -21,7 +21,7 @@
 /* line 13, ../../scss/layout/preview.scss */
 .container-top {
   width: 100%;
-  height: 50px;
+  height: 40px;
   background-color: #0d3336;
   color: white;
 }
@@ -47,8 +47,8 @@
 
 /* line 36, ../../scss/layout/preview.scss */
 .caption-under {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-bottom: 20px;
   padding-bottom: 3px;
   border-bottom: 1px solid #0d3336;
@@ -56,11 +56,11 @@
 }
 /* line 44, ../../scss/layout/preview.scss */
 .caption-under:after {
-  content: attr(title);
-  display: block;
   position: absolute;
-  left: .5em;
   bottom: -23px;
+  left: .5em;
+  display: block;
+  content: attr(title);
   white-space: nowrap;
 }
 /* line 53, ../../scss/layout/preview.scss */
@@ -76,10 +76,10 @@
 }
 
 /* line 71, ../../scss/layout/preview.scss */
-.list-label .label {
+.list-item-label .label {
   display: inline-block;
-  min-width: 10em;
   margin-bottom: 10px;
+  min-width: 10em;
 }
 
 /* line 79, ../../scss/layout/preview.scss */
@@ -100,26 +100,31 @@ h3.title {
 }
 /* line 92, ../../scss/layout/preview.scss */
 h3.title:after {
-  content: '\002702';
-  display: inline-block;
   position: relative;
   top: 0;
   right: -10px;
+  display: inline-block;
   padding: 0 3px;
   background: transparent;
   color: #dddddd;
+  content: '\002702';
 }
 
 /* line 104, ../../scss/layout/preview.scss */
 h4.title {
-  margin: 10px 0 3px;
   display: inline-block;
+  margin: 10px 0 3px;
   padding: 10px;
   background-color: #48a770;
   color: white;
 }
 
 /* line 112, ../../scss/layout/preview.scss */
+h5.title {
+  margin: 10px 0 3px;
+}
+
+/* line 116, ../../scss/layout/preview.scss */
 .box {
   margin-bottom: 20px;
 }

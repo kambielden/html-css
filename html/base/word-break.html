@@ -21,7 +21,7 @@
             <p>基本は単語区切りで折り返す、長いテキストは折り返さない(折り返せない)</p>
 
             <!-- .example-view -->
-            <div class="example-view">
+            <div class="example-view blok">
               <!-- example -->
               <div style="word-wrap:normal;">
                 <span>
@@ -36,7 +36,7 @@
 
             <p>長いテキストも折り返えす</p>
             <!-- .example-view -->
-            <div class="example-view">
+            <div class="example-view blok">
               <!-- example -->
               <div style="word-wrap:break-word;">
                 <span>
@@ -100,7 +100,7 @@
 
             <p>break-all を指定すると "consectetuer" が改行されています</p>
             <!-- .example-view -->
-            <div class="example-view">
+            <div class="example-view blok">
               <!-- example -->
               <div style="word-break:break-all;">
                 <span>
@@ -155,7 +155,7 @@
 
             <p>break-word を指定すると "consectetuer" は改行されず、URLのみ改行されます</p>
             <!-- .example-view -->
-            <div class="example-view">
+            <div class="example-view blok">
               <!-- example -->
               <div style="word-wrap:break-word;">
                 <span>
@@ -215,7 +215,7 @@
 
             <p>hyphens:manual; では &amp;shy; が "-" で表示され改行されます</p>
             <!-- .example-view -->
-            <div class="example-view">
+            <div class="example-view blok">
               <!-- example -->
               <div>
                 <span>
@@ -227,7 +227,7 @@
 
             <p>hyphens:none; では &amp;shy; は何も表示されす、単語中は改行されません</p>
             <!-- .example-view -->
-            <div class="example-view">
+            <div class="example-view blok">
               <!-- example -->
               <div style="-webkit-hyphens:none;">
                 <span>
@@ -274,7 +274,7 @@
             <!-- .example-code -->
             <div class="example-code">
               <!-- 20px * line + 6px -->
-              <textarea style="height:106px;">
+              <textarea style="min-width:48%;height:106px;">
 .wordBreak {
   -ms-word-break: break-all;
   word-break: break-all;
